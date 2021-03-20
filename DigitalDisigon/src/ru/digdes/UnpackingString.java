@@ -36,6 +36,7 @@ public class UnpackingString {
 				+ "^\\d+\\[\\d+\\[[a-zA-Z]+\\][a-zA-Z]+\\]\\d+\\[\\d+\\[[a-zA-Z]+\\]\\]";
 		
 		
+		//цикл дл€ ввода и проверки строки на валидность
 		while(true) {
 		System.out.println(
 				"¬ведите строку формата: 3[xyz]4[xy]z, при этом одно повторение может содержать другое. Ќапример: 2[3[x]y] ");
@@ -55,9 +56,10 @@ public class UnpackingString {
 		}
 		}
 		
+		
+		String[] dd = str.split("");//создание массива строк из введеной строки
 
-		String[] dd = str.split("");
-
+		// –аспаковка входной строки и формирование подстрок
 		for (int i = 0; i < dd.length; i++) {
 
 			if (dd[i].matches("\\d")) {
@@ -108,10 +110,10 @@ public class UnpackingString {
 
 		}
 
-		fin2.append(sb);
+		String finall = fin2.append(sb).toString();
 		System.out.println();
 
-		System.out.println(fin2);
+		System.out.println(finall);
 
 	}
 
